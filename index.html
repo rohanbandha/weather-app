@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@100..700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex flex-col  space-y-6 justify-center items-center h-screen text-center">
-    <div class="mb-12">
-        <h1 class="text-xl sm:text-2xl md:text-3xl text-white font-bold">A basic weather web app created by <a href="https://rohanbandha.github.io/portfolio/">Rohan Bandha</a></h1>
-    </div>
-    <div class="bg-white/20 backdrop-blur-md p-6 rounded-lg shadow-lg mx-8 text-center max-w-md">
-        <h1 class="text-3xl text-[#1b263b] font-bold mb-4">Weather App</h1>
-        <input type="text" id="city" placeholder="Enter city" class="p-2 w-full mb-4 rounded">
-        <button onclick="getWeather()" class="bg-blue-500 hover:bg-sky-700 text-white px-4 py-2 rounded">Get Weather</button>
-        <div id="weather" class="mb-4 text-lg"></div>
-        <img id="weather-icon" class="mx-auto mt-2 hidden" alt="Weather icon">
-    </div>
-    
-    <script src="script.js"></script>
+<body class="bg-gradient-to-br from-purple-500 to-pink-500 text-white min-h-screen flex items-center justify-center">
 
+  <div class="max-w-md w-full mx-4 p-6 bg-white/30 backdrop-blur-md rounded-lg shadow-xl">
+    <h1 class="text-4xl font-bold mb-4 text-center">Weather App</h1>
     
+    <!-- Input -->
+    <input
+      type="text"
+      id="city"
+      placeholder="Enter city"
+      class="w-full p-3 rounded mb-4
+             bg-white/70 text-gray-800 placeholder-gray-500
+             focus:outline-none focus:ring-2 focus:ring-white/80"
+    />
+    
+    <!-- Button -->
+    <button
+      onclick="getWeather()"
+      class="w-full py-3 bg-purple-600 hover:bg-purple-700 rounded 
+             text-white font-semibold transition-colors duration-200"
+    >
+      Get Weather
+    </button>
+
+    <!-- Weather Display -->
+    <div id="weather" class="text-2xl mt-4 text-center"></div>
+    <img id="weather-icon" class="mx-auto mt-2 hidden w-20 h-20" alt="Weather icon" />
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
